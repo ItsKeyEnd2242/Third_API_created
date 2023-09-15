@@ -76,8 +76,8 @@ Enviar para o repositorio criado na conta do seu github:
     
     git remote "URL do repositorio criado"                   ~remova esta esclamções do link~
     
-    git branch -M "nome_da_barnch"
+    git branch -M main
     
-    git push origin "nome_da_barnch"
+    git push -u origin main
 ***
 * Feito!!!
