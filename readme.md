@@ -66,6 +66,7 @@ Executar no gitbash:
     npm run  start
 ***
 Enviar para o repositorio criado na conta do seu github:
+    
     git init
     
     git add .
@@ -81,3 +82,11 @@ Enviar para o repositorio criado na conta do seu github:
     git push -u origin main
 ***
 * Feito!!!
+
+## Criar estrutura para o trabalho
+
+(Criar arquivo app.js na pasta src):
+```
+
+touch src/app.js
+```
