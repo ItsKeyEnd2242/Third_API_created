@@ -90,3 +90,17 @@ Enviar para o repositorio criado na conta do seu github:
 
 touch src/app.js
 ```
+
+## Rodar o comando 'npm instal' sempre que fizzer um clone do github
+
+## Criar o arquivo .env e o .env.example
+
+````
+touch .env
+````
+
+* Criar arquivo para salvar as variaveis necessarias da aplicação sem os valores.
+
+````
+touch .env.example
+````
