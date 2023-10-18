@@ -156,3 +156,20 @@ module.exports = router;
 ````
 
 
+### CRIAÇÃO DE CONTROLES
+* arquivos para processar as requisições das notas
+
+
+    <br>
+
+### CRIAR PASTA DE CONTROLLERS
+
+````
+mkdir src/controllers
+````
+
+### CRIAR ARQUIVO CONTROLLER
+
+````
+touch src/controllers/controller.js
+````
