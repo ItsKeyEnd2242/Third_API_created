@@ -121,36 +121,27 @@ const { Router } = require('express');
 //instancir o Router na variavel router
 const router = Router();
 
+const {
+    listarDados,
+    gravarDados,
+    atualizarDados,
+    deletarDados
+        } = require('../controllers/controller')
+
 
 //TODOS OS METODOS PELA URL
 
 //metodo get
-router.get('/api', (request, response) => {
-    response.send('poggers!');
-    console.log('Metodo get usado');
-});
-
+router.get('/listar', listarDados);
 
 //metodo post
-router.post('/api', (request, response) => {
-    response.send('Metodo utilizado para salvar informações');
-    console.log('Metodo post usado');
-    console.log(request);
-});
-
+router.post('/gravar', gravarDados);
 
 //metodo put
-router.put('/api', (request, response) => {
-    response.send('Metodo utilizado para substituir informações');
-    console.log('Metodo put usado');
-    console.log('id: ', request.params.id);
-});
+router.put('/atualizar/:id',atualizarDados);
 
 //metodo delete
-router.delete('/api', (request, response) => {
-    response.send('DELETADOOOOO!');
-    console.log('Metodo delete usado');
-});
+router.delete('/deletar/:id', deletarDados);
 
 module.exports = router;
 ````
@@ -173,3 +164,4 @@ mkdir src/controllers
 ````
 touch src/controllers/controller.js
 ````
+
