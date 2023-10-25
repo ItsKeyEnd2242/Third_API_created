@@ -24,9 +24,9 @@ criar arquivo .env: armazenara as variaveis do ambiente:
 
     touch .env
 ***
-instalar pacotes da API:
+ # instalar pacotes da API:
 
-    npm i express nodemon dotenv
+    npm i express nodemon dotenv mysql2
 ***
 * express: será o servidor da api
 * nodemon: atualizar os arquivos alterados sem parar o servidor
@@ -164,4 +164,54 @@ mkdir src/controllers
 ````
 touch src/controllers/controller.js
 ````
+````
+````
+module.exports = {
+    listarDados,
+    gravarDados,
+    atualizarDados,
+    deletarDados
+}
 
+<br>
+
+## Configurar estrutura de conexão com banco de dados
+### Criar pasta'config' dentro da pasta 'src'
+
+```
+mkdir src/config
+```
+
+## Criar arquivo 'db.js' dentro da pasta 'config'
+
+````
+touch src/config/db.js
+````
+
+### Colar o codigo no arquivo db.js
+````
+//importando o pacote de conexão com banco de dados
+const mysql = require('mysql2');
+//importar variaveis de conexão do banco
+require('dotenv').config();
+
+
+console.log(process.env.DB_HOST);
+
+const connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
+});
+
+connection.connect( (err) =>{
+    if(err){
+        console.log('Erro de conexão: ' + err);
+    } else {
+        console.log('Mysql Connected!');
+    }
+});
+
+module.exports = connection;
+````
