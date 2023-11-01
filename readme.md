@@ -1,4 +1,4 @@
-#Documentação da API
+# Documentação da API
 * abrir no tarminal do gitbash
 Definir local do computador para criar a pasta do projeto:
 
@@ -215,3 +215,8 @@ connection.connect( (err) =>{
 
 module.exports = connection;
 ````
+# No mysl workbech insira o seguinte codigo
+`````
+create database turma_2at
+use turma_2at
+`````
