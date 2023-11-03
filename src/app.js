@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 const crudRouter = require('./routes/CrudRouter');
+const alunosRouter = require('./routes/CrudRouter');
 
 const dotenv = require('dotenv').config();
 
