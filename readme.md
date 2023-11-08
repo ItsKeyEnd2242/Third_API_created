@@ -218,5 +218,19 @@ module.exports = connection;
 # No mysl workbech insira o seguinte codigo
 `````
 create database turma_2at
-use turma_2at
+use turma_2at;
+select * from alunos;
+`````
+
+### Criar tabela users
+
+`````
+create table alunos(
+    id int not null auto_increment,
+    nome varchar(120) not null,
+    dt_nascimento date not null,
+    time_do_coracao varchar(120),
+    primary_key(id)
+);
+
 `````
